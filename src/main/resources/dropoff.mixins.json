@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "net.thefallequinox.dropoff.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"BlockMixin",
+		"EntityMixin",
+		"FallingBlockEntityMixin",
+		"FireBlockMixin",
+		"ServerWorldMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

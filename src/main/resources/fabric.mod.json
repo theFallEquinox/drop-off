@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "dropoff",
+	"version": "${version}",
+	"name": "Drop-off!",
+	"description": "Next time you build a bridge, add supports, or both you and the block will drop-off. (This mod is a port of Re-disruption by quxii to Fabric.)",
+	"authors": [
+		"theFallEquinox (Fabric port), quxii (1.20.1 port), Sci_Rave (original author)."
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT License",
+	"icon": "assets/dropoff/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.thefallequinox.dropoff.Dropoff"
+		],
+		"client": [
+			"net.thefallequinox.dropoff.DropoffClient"
+		],
+		"fabric-datagen": [
+			"net.thefallequinox.dropoff.DropoffDataGenerator"
+		]
+	},
+	"mixins": [
+		"dropoff.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
