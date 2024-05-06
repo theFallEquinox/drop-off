@@ -24,8 +24,8 @@ public class Dropoff implements ModInitializer {
 	public static final TagKey<Block> FLOATS = getBlockTag("floats");
 	public static final TagKey<Block> USE_DEFAULT_STATE = getBlockTag("default_state");
 
-	public static final GameEvent FIRE_SPREAD = new GameEvent("fire_spread", 16);
-	public static final GameEvent BLOCK_EXPLODED = new GameEvent("block_exploded", 16);
+	public static final GameEvent FIRE_SPREAD =	Registry.register(Registries.GAME_EVENT, "fire_spread", new GameEvent(16));
+	public static final GameEvent BLOCK_EXPLODED = Registry.register(Registries.GAME_EVENT, "block_exploded", new GameEvent(16));
 
 	public static final TagKey<GameEvent> DISRUPTION = getGameEventTag("disruption");
 	public static final TagKey<GameEvent> NEIGHBOR_DISRUPTION = getGameEventTag("neighbor_disruption");
@@ -46,10 +46,6 @@ public class Dropoff implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
-		Registry.register(Registries.GAME_EVENT, Identifier.tryParse(FIRE_SPREAD.getId()), FIRE_SPREAD);
-		Registry.register(Registries.GAME_EVENT, Identifier.tryParse(BLOCK_EXPLODED.getId()), BLOCK_EXPLODED);
-
 		LOGGER.info("The bridge builder is dropping-off.");
 	}
 }

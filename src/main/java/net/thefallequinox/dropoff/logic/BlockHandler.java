@@ -254,7 +254,7 @@ public class BlockHandler {
 			}
 		} else if (!isBlockReplaceable(blockState2)) {
 			fallingBlock.discard();
-			if (fallingBlock.dropItem && fallingBlock.getWorld().getGameRules().getBoolean(GameRules.DO_ENTITY_DROPS)) {
+			if (fallingBlock.dropItem && fallingBlock.getWorld().getGameRules().getBooleanValue(GameRules.DO_ENTITY_DROPS)) {
 				fallingBlock.onDestroyedOnLanding(block, blockPos);
 				fallingBlock.dropItem(block);
 			}
